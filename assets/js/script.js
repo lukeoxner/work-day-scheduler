@@ -7,7 +7,7 @@ var saveBtn = document.querySelector(".saveBtn");
 
 
 // declare global variables
-
+var currentHour = moment().hour();
 
 
 // declare functions
@@ -18,9 +18,6 @@ function setCurrentDate() {
 
 }
 
-function setCurrentHour() {
-    var currentHour = moment().hour();
-}
 
 function setBlockStatus() {
 
@@ -47,15 +44,12 @@ function setBlockStatus() {
         }
 
     })
-
-
-
+    
 }
 
 
 
 setCurrentDate();
-setCurrentHour();
 setBlockStatus();
 
 
