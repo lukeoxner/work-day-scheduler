@@ -78,5 +78,18 @@ $(document).ready(function () {
 
     });
 
+    $(".clearBtn").on("click", function() {
+        
+        var time = $(this).parent().attr("id");
+        var event = $(this).siblings(".description").val();
+
+        localStorage.removeItem(time, event);
+
+        location.reload();
+        
+
+    });
+
+
 
 });

@@ -22,7 +22,7 @@ textarea {
 }
 
 .display-3 {
-	font-family: 'Coda Caption', sans-serif;
+	font-family: 'Russo One', sans-serif;
 }
 
 .lead,
@@ -76,6 +76,19 @@ textarea {
 }
 
 .saveBtn i:hover {
+	font-size: 20px;
+	transition: all 0.3s ease-in-out;
+}
+
+.clearBtn {
+	border-left: 1px solid black;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: #e63946;
+	color: white;
+}
+
+.clearBtn i:hover {
 	font-size: 20px;
 	transition: all 0.3s ease-in-out;
 }
