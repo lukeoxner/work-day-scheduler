@@ -18,10 +18,45 @@ function setCurrentDate() {
 
 }
 
+function setCurrentHour() {
+    var currentHour = moment().hour();
+}
+
+function setBlockStatus() {
+
+    $(".time-block").each(function() {
+
+        var blockHour = parseInt($(this).attr("id"));
+
+        if (currentHour > blockHour) {
+            $(this).addClass("past");
+            $(this).removeClass("present");
+            $(this).removeClass("future");
+        }
+        
+        if (currentHour === blockHour) {
+            $(this).removeClass("past");
+            $(this).addClass("present");
+            $(this).removeClass("future");
+        }
+        
+        if (currentHour < blockHour) {
+            $(this).removeClass("past");
+            $(this).removeClass("present");
+            $(this).addClass("future");
+        }
+
+    })
+
+
+
+}
+
 
 
 setCurrentDate();
-
+setCurrentHour();
+setBlockStatus();
 
 
 
